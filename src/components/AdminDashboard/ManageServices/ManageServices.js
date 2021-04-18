@@ -12,14 +12,14 @@ const ManageServices = () => {
     // Get All Services Information
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://thawing-everglades-39599.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
 
 
     const deleteServices = (event, id) => {
-        fetch(`http://localhost:5000/deleteService/${id}`, {
+        fetch(`https://thawing-everglades-39599.herokuapp.com/deleteService/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -27,7 +27,7 @@ const ManageServices = () => {
                 if (result) {
                     alert("Service has been deleted successfully!");
 
-                    fetch('http://localhost:5000/services')
+                    fetch('https://thawing-everglades-39599.herokuapp.com/services')
                         .then(res => res.json())
                         .then(data => setServices(data));
                 }

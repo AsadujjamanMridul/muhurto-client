@@ -9,7 +9,7 @@ const OrderList = () => {
     const [bookingList, setBookingList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://thawing-everglades-39599.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => setBookingList(data))
     }, []);
@@ -22,7 +22,7 @@ const OrderList = () => {
         // const status = e.target.value;
         // const newService = { id, status }
 
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://thawing-everglades-39599.herokuapp.com/updateStatus/${id}`, {
             method: 'PATCH',
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ status: e.target.value })

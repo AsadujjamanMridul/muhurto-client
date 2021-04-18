@@ -13,7 +13,7 @@ const Review = () => {
         data.imageURL = loggedInUser.imageURL;
         setReviewData(data);
 
-        const url = "http://localhost:5000/addReview";
+        const url = "https://thawing-everglades-39599.herokuapp.com/addReview";
 
         fetch(url, {
             method: "POST",

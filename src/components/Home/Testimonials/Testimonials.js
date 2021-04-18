@@ -15,7 +15,7 @@ const Testimonials = () => {
     // Get All Services Information
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://thawing-everglades-39599.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, []);

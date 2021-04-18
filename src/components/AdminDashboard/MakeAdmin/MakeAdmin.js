@@ -18,7 +18,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         setNewAdmin(data);
 
-        const url = "http://localhost:5000/addAdmin";
+        const url = "https://thawing-everglades-39599.herokuapp.com/addAdmin";
 
         fetch(url, {
             method: "POST",

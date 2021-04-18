@@ -10,7 +10,7 @@ const BookingList = () => {
     const [bookingList, setBookingList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookingList?email=' + loggedInUser.email)
+        fetch('https://thawing-everglades-39599.herokuapp.com/bookingList?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setBookingList(data))
     }, []);

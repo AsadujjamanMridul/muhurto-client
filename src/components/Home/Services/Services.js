@@ -29,7 +29,7 @@ const Services = () => {
     const [servicesList, setServicesList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://thawing-everglades-39599.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServicesList(data))
     }, []);

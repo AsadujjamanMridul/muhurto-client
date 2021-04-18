@@ -22,7 +22,7 @@ const AddService = () => {
         formData.append('serviceName', data.serviceName);
         formData.append('serviceCharge', data.serviceCharge);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://thawing-everglades-39599.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

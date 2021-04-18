@@ -28,7 +28,7 @@ const Book = () => {
     };
 
     const handlePayment = async paymentId => {
-        const url = "http://localhost:5000/newBooking";
+        const url = "https://thawing-everglades-39599.herokuapp.com/newBooking";
 
         fetch(url, {
             method: "POST",
