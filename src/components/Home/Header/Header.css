@@ -1,0 +1,42 @@
+.header{
+    position: relative;
+    min-height: 92vh;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../../../assets/images/bg-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 70%;
+    z-index: -1;
+    filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.text-1{
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em !important;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.text-2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em !important;
+    font-weight: 500;
+}
+
+.banner-dialogue{
+    font-family: 'Raleway', sans-serif;
+    font-size: .9em !important;
+    font-weight: 400;
+    
+}

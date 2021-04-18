@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+.body {
+    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
+    font-family: 'Rubik', sans-serif;
+    background: #C1F7D5;
+    height: 100 !important
+}
+
+.container-fluid {
+    overflow: hidden;
+    background: #354463;
+    color: #e3e3e3 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.small {
+    font-size: .75em !important;
+}
+
+.footer-brand-name {
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+}
+
+.social {
+    font-size: 21px !important
+}
+
+.facebook, .instagram, .linkedIn, .twitter{
+    transition: color ease-in-out .3s;
+}
+
+.facebook:hover, .linkedIn:hover, .instagram:hover, .twitter:hover {
+    color: #f3efe9 !important;
+}
+
+.rights {
+    font-size: 1em;
+}
+
+.footer-title{
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em !important;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+.footer-link{
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    color: rgba(243, 239, 233, .7) !important;
+    transition: color ease-in-out .3s;
+}
+
+.footer-link:hover{
+    color: rgba(211, 165, 55, .7) !important;
+    cursor: pointer;
+}
+
+footer{
+    overflow: hidden !important;
+}

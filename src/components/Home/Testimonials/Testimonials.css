@@ -1,0 +1,9 @@
+.testimonial-image{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon{
+    color: black !important;
+}

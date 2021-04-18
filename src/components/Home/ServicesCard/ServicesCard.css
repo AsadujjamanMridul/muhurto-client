@@ -1,0 +1,38 @@
+.services-div{
+    position: relative;
+    overflow: hidden;
+    transition-duration: .6s;
+}
+
+.services-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    filter: grayscale(0%) contrast(.8);
+    transition: transform ease-in-out .6s, filter ease-in-out .6s;
+}
+
+.service-name {
+    position: absolute;
+    top: 40%;
+    color: #f3efe9;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    border: 1px solid #f3efe9;
+    transition: border ease-in-out .6s, letter-spacing ease-in-out .6s;
+}
+
+.services-div:hover .service-name{
+    color: #ffffff;
+    border: 1px solid #d3a537;
+    letter-spacing: .1em;
+}
+
+.services-div:hover .services-img{
+    width: 100%;
+    transition-duration: .6s;
+    transform: scale(1.2);
+    filter: grayscale(70%) contrast(.5);
+}

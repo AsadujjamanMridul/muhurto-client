@@ -1,0 +1,16 @@
+.min-h-100{
+    min-height: 100vh;
+}
+
+.side-nav-link{
+    font-size: 1em !important;
+    font-weight: 400;
+    font-family: 'Cabin', sans-serif;
+    color: rgba(243, 239, 233, .7) !important;
+    transition: color ease-in-out .2s;
+}
+
+.side-nav-link:hover{
+    color: rgba(211, 165, 55, .7) !important;
+    cursor: pointer;
+}

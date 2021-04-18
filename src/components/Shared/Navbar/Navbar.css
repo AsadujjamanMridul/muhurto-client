@@ -1,0 +1,21 @@
+.brand-name{
+    font-family: 'Noor';
+    font-weight: 500;
+    font-size: 18pt !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.nav-link{
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em !important;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color: #d3a537 !important;
+}
+
+.loggedIn-img:hover{
+    filter: grayscale(.3);
+}

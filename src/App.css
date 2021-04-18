@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,107 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+@font-face {
+  font-family: "Shurjo";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/ShurjoWeb_400_v2.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Shurjo";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/ShurjoWeb_600_v2.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Shurjo";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/ShurjoWeb_700_v2.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Noor";
+  font-display: swap;
+  font-style: normal;
+  src: url('./assets/fonts/Li-Shamim-Noor-Unicode.ttf') format("truetype");
+}
+
+.color-1 {
+  color: #f3efe9 !important;
+}
+
+.color-2 {
+  color: #d1bcd6 !important;
+}
+
+.color-3 {
+  color: #9e7e99 !important;
+}
+
+.color-4 {
+  color: #3b424b !important;
+}
+
+.color-5 {
+  color: #d3a537 !important;
+}
+
+.bg-1 {
+  background-color: #f3efe9 !important;
+}
+
+.bg-2 {
+  background-color: #d1bcd6 !important;
+}
+
+.bg-3 {
+  background-color: #9e7e99 !important;
+}
+
+.bg-4 {
+  background-color: #3b424b !important;
+}
+
+.bg-5 {
+  background-color: #d3a537 !important;
+}
+
+.btn-brand {
+  background-color: #3b424b;
+  color: #d3a537;
+  border: none;
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1em !important;
+  font-weight: 500 !important;
+  padding: .75em 2em !important;
+  transition: color ease-in-out .3s, background-color ease-in-out .3s;
+}
+
+.btn-brand:hover {
+  background-color: hsl(213, 11%, 15%);
+  color: #d3a537;
+}
+
+.btn-brand-outline{
+  color: #3b424b;
+  border: 1px solid #3b424b;
+  background-color: rgba(158, 126, 153, 0) ;
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1em !important;
+  font-weight: 500 !important;
+  padding: .75em 2em !important;
+  transition: background-color ease-in-out .3s, border ease-in-out .3s;
+}
+
+.btn-brand-outline:hover {
+  background-color: rgba(0, 0, 0, .1);
+  border: 1px solid rgba(59, 66, 75, 0);
 }

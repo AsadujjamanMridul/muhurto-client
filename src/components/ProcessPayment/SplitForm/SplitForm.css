@@ -1,0 +1,35 @@
+.label {
+    color: #6b7c93;
+    font-weight: 300;
+    font-family: 'Cabin', sans-serif;
+}
+
+.StripeElement {
+    display: block;
+    padding: .75em .75em;
+    font-size: 1em;
+    width: 50%;
+    font-family: 'Cabin', sans-serif;
+    border: none !important;
+    outline: 0;
+    border-radius: 4px;
+    background: white;
+}
+
+input::placeholder {
+    color: #aab7c4;
+}
+
+input:focus, .StripeElement--focus {
+    box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px, rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+.StripeElement.IdealBankElement, .StripeElement.FpxBankElement, .StripeElement.PaymentRequestButton {
+    padding: 0;
+}
+
+.StripeElement.PaymentRequestButton {
+    height: 40px;
+}
