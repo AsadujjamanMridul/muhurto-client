@@ -28,6 +28,7 @@
     color: #ffffff;
     border: 1px solid #d3a537;
     letter-spacing: .1em;
+    cursor: pointer;
 }
 
 .services-div:hover .services-img{
@@ -35,4 +36,5 @@
     transition-duration: .6s;
     transform: scale(1.2);
     filter: grayscale(70%) contrast(.5);
+    cursor: pointer;
 }
