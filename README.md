@@ -1,4 +1,4 @@
-# Muhurto - Server
+# Muhurto - Client
 
 Capture your best moments with us!
 
