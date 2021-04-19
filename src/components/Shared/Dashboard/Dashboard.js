@@ -18,46 +18,50 @@ const Dashboard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [selectedService, setSelectedService] = useContext(ServiceContext);
     const [role, setRole] = useState('')
-    
-    
-    let defaultDisplay = <WelcomeScreen/>;
 
-    useEffect(()=> {
+
+    let defaultDisplay = <WelcomeScreen />;
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
         fetch(`https://thawing-everglades-39599.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
-        .then(res => res.json())
-        .then(data => {
-            if(data){
-                setRole('admin');
-                defaultDisplay = <OrderList/>;
-                setDisplayToggle(defaultDisplay);
-            }
-            else{
-                setRole('user');
-                defaultDisplay = <Book/>;
-                setDisplayToggle(defaultDisplay)
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    setRole('admin');
+                    defaultDisplay = <OrderList />;
+                    setDisplayToggle(defaultDisplay);
+                    setLoading(!loading);
+                }
+                else {
+                    setRole('user');
+                    defaultDisplay = <Book />;
+                    setDisplayToggle(defaultDisplay);
+                    setLoading(!loading);
+                }
+            })
     }, [])
 
     const [displayToogle, setDisplayToggle] = useState(defaultDisplay);
 
-    const handleNavigation = (to) =>{
-        switch(to){
-            case 'Book': setDisplayToggle(<Book/>); break;
-            case 'Booking List' : setDisplayToggle(<BookingList/>); break;
-            case 'Review' : setDisplayToggle(<Review/>); break;
-            case 'Order List' : setDisplayToggle(<OrderList/>); break;
-            case 'Add Service' : setDisplayToggle(<AddService/>); break;
-            case 'Make Admin' : setDisplayToggle(<MakeAdmin/>); break;
-            case 'Manage Services' : setDisplayToggle(<ManageServices/>); break;
-            default : setDisplayToggle(<WelcomeScreen/>); break;
+    const handleNavigation = (to) => {
+        switch (to) {
+            case 'Book': setDisplayToggle(<Book />); break;
+            case 'Booking List': setDisplayToggle(<BookingList />); break;
+            case 'Review': setDisplayToggle(<Review />); break;
+            case 'Order List': setDisplayToggle(<OrderList />); break;
+            case 'Add Service': setDisplayToggle(<AddService />); break;
+            case 'Make Admin': setDisplayToggle(<MakeAdmin />); break;
+            case 'Manage Services': setDisplayToggle(<ManageServices />); break;
+            default: setDisplayToggle(<WelcomeScreen loading={loading}/>); break;
         }
     }
 
 
     return (
         <div className='row w-100 d-flex m-0 p-0'>
-            <Sidebar role={role} handleNavigation={handleNavigation}/>
+            <Sidebar role={role} handleNavigation={handleNavigation} loading={loading}/>
             {
                 displayToogle
             }

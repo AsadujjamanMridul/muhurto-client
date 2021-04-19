@@ -1,10 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App'
-
 import './Navbar.css'
 
+
+import PulseLoader from "react-spinners/PulseLoader"
+import BarLoader from "react-spinners/BarLoader"
+import { css } from "@emotion/react";
+
 const Navbar = () => {
+
+    const [loading, setLoading] = useState(true);
+    const override = css`
+        display: block;
+        margin: 0 auto;
+        border-color: red;`;
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
@@ -24,17 +34,19 @@ const Navbar = () => {
 
     const [roleDashboardName, setRoleDashboardName] = useState('Dashboard')
 
-    useEffect(()=> {
+    useEffect(() => {
         fetch(`https://thawing-everglades-39599.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
-        .then(res => res.json())
-        .then(data => {
-            if(data){
-                setRoleDashboardName('Admin');
-            }
-            else{
-                setRoleDashboardName('Dashboard');
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    setRoleDashboardName('Admin');
+                    setLoading(!loading);
+                }
+                else {
+                    setRoleDashboardName('Dashboard');
+                    setLoading(!loading);
+                }
+            })
     }, [loggedInUser.email])
 
     return (
@@ -57,7 +69,12 @@ const Navbar = () => {
                                 <a className="nav-link color-1" href="#">Pricing</a>
                             </li>
                             <li className="nav-item me-4">
-                                <Link className="nav-link color-1" to="/dashboard">{roleDashboardName}</Link>
+                                <Link className="nav-link color-1" to="/dashboard">
+                                    {roleDashboardName}
+                                    <div className="sweet-loading d-flex justify-content-center align-items-center">
+                                        <BarLoader color={'#f3efe9'} height={1} width={40} css={override} loading={loading} />
+                                    </div>
+                                </Link>
                             </li>
                             {
                                 loginButtonToggle

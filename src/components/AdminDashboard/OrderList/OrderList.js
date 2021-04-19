@@ -1,26 +1,35 @@
 import React, { Fragment, useContext, useEffect, useState } from 'react';
 import { ServiceContext, UserContext } from '../../../App';
 
+import PulseLoader from "react-spinners/PulseLoader"
+import { css } from "@emotion/react";
+
 const OrderList = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [selectedService, setSelectedService] = useContext(ServiceContext);
+
+    const [loading, setLoading] = useState(true);
+    const override = css`
+        display: block;
+        margin: 0 auto;
+        border-color: red;
+        position: absolute;
+        top: 30%;`;
 
     const [bookingList, setBookingList] = useState([]);
 
     useEffect(() => {
         fetch('https://thawing-everglades-39599.herokuapp.com/bookings')
             .then(res => res.json())
-            .then(data => setBookingList(data))
+            .then(data => {
+                setBookingList(data);
+                setLoading(!loading);
+            })
     }, []);
 
 
     const handleStatusChange = (e, id) => {
-        // console.log("Id", id);
-        // console.log(e.target.value);
-
-        // const status = e.target.value;
-        // const newService = { id, status }
 
         fetch(`https://thawing-everglades-39599.herokuapp.com/updateStatus/${id}`, {
             method: 'PATCH',
@@ -42,7 +51,7 @@ const OrderList = () => {
                 return (
                     <Fragment>
                         <tbody>
-                            <tr scope="row mt-3">
+                            <tr scope="row mt-3 table-data-text">
                                 <td className="py-2 px-1 color-4">{booking.paymentId}</td>
                                 <td className="p-1 py-2 color-4">{booking.clientName}</td>
                                 <td className="text-center p-1 py-2 color-4">{booking.serviceName}</td>
@@ -52,6 +61,7 @@ const OrderList = () => {
                                         aria-label="Default select example"
                                         onChange={(event) => handleStatusChange(event, booking._id)}>
                                         <option selected>{booking.status}</option>
+                                        <option value="pending">pending</option>
                                         <option value="onGoing">onGoing</option>
                                         <option value="done">done</option>
                                     </select>
@@ -73,9 +83,9 @@ const OrderList = () => {
                     <img src={loggedInUser.imageURL} alt="..." className='img-fluid rounded-circle' style={{ width: "50px" }} />
                 </div>
             </div>
-            <div className="min-h-92 p-1 p-md-5 bg-1">
+            <div className="min-h-92 p-1 p-md-5 bg-1 position-relative">
                 <table className="table container-fluid table-borderless table-hover bg-1 overflow-scroll">
-                    <thead className=' bg-1'>
+                    <thead className='table-header-text bg-1'>
                         <tr>
                             <th scope="col" className="py-3 px-1 color-5">Payment Id</th>
                             <th scope="col" className="py-3 p-1 color-5">Client's Name</th>
@@ -88,6 +98,9 @@ const OrderList = () => {
                         BookingDetailList()
                     }
                 </table>
+                <div className="sweet-loading d-flex justify-content-center align-items-center">
+                    <PulseLoader color={'#3b424b'} size={15} margin={2} css={override} loading={loading} />
+                </div>
             </div>
         </div>
     );

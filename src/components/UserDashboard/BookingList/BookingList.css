@@ -1,0 +1,12 @@
+.table-header-text{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 12pt;
+    letter-spacing: .05em;
+}
+
+.table-data-text{
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+}

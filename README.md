@@ -1,71 +1,19 @@
-# Getting Started with Create React App
+# Muhurto - Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Capture your best moments with us!
 
-## Available Scripts
+## Overview
+This is mainly a mockup website for a wedding photography team. We have used [Firebase Auth](https://firebase.google.com/docs/auth) for authenticate user and [MongoDB](https://www.mongodb.com/) for storing the database for this project.
 
-In the project directory, you can run:
+User can select any services (i.e: wedding photography, potrait package, engagement package etc.) he/she likes. Then he/she will be redirected to **login page** (if not logged in). We have used firebase authentication system for this purpose. So, any user with a google account can sign-in or sign-up to this website. 
+After successful login, user will be redirected to **dashboard**, where he/she can book their desired services. For payment, we have used [Stripe](https://stripe.com/) payment gateway. User can also chcek their booking lists, booking status, payment id from *Booking Lists* page. They can even post review regarding this website. Every review will be stored in database. When someone visit the website, he/she can see these reviews in the landing page.
 
-### `npm start`
+There is also an **admin page** for managing bookings, services, admins etc. General user will not have access over this page, since we are filtering them with their email address. If any admin wants to add a new admin, he/she just have to go to *Add Admin* page, type the email address of the to-be admin and submit! As simple as that! An admin can change the status of any bookings, i.e: pending, onGoing, done, from *Order List* page. In addition, admin can also add new service and delete services through *Add Service* and *Manage Services* pages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This website was only for development purpose. You can definitely check it out!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## [Live Site](https://muhurto-photography.firebaseapp.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###### `Thank you`
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# complete-website-client-AsadujjamanMridul
