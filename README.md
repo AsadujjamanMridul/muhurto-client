@@ -12,8 +12,42 @@ There is also an **admin page** for managing bookings, services, admins etc. Gen
 
 This website was only for development purpose. You can definitely check it out!
 
+### Technology Used
+• MERN Stack <br/>
+• Stripe Payment Gateway <br/>
+<br/>
+• Firebase Auth <br/>
+• Firebase Hosting <br/>
+<br/>
+• React Router <br/>
+• React Hook Form <br/>
+• Private Route <br/>
+• Bootstrap
 
-## [Live Site](https://muhurto-photography.firebaseapp.com/)
+
+## [Live Site](https://muhurto-photography.firebaseapp.com/) <br/>
+## [Server Side Repo](https://github.com/AsadujjamanMridul/muhurto-server/)
+
+<br/>
+<br/>
+
+## Screenshots
+#### Landing Page
+![](screenshots/landing.png)
+<br/>
+#### User 1 Dashboard
+![](screenshots/user-1-dashboard.png)
+<br/>
+#### User 2 Dashboard
+![](screenshots/user-2-dashboard.png)
+<br/>
+#### Payment Gateway
+![](screenshots/payment.png)
+<br/>
+#### Admin Dashboard
+![](screenshots/admin.png)
+#### Manage Services
+![](screenshots/services.png)
 
 ###### `Thank you`
 
