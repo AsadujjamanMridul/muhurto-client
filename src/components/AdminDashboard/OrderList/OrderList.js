@@ -51,7 +51,7 @@ const OrderList = () => {
                 return (
                     <Fragment>
                         <tbody>
-                            <tr scope="row mt-3 table-data-text">
+                            <tr className="row mt-3 table-data-text">
                                 <td className="py-2 px-1 color-4">{booking.paymentId}</td>
                                 <td className="p-1 py-2 color-4">{booking.clientName}</td>
                                 <td className="text-center p-1 py-2 color-4">{booking.serviceName}</td>

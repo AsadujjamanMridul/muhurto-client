@@ -1,6 +1,8 @@
 import React from 'react';
 import './Header.css'
 
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <section>
@@ -10,9 +12,9 @@ const Header = () => {
 
                     <p className="text-center banner-dialogue color-1 px-4 py-3 rounded"><small>Your each movement, each emotion is nothing but a beautiful picture <br />and we just want to hold on those <strong>moments</strong> with our camera <br /> and make it a piece of art with our adroit editing</small></p>
                     
-                    <div className="d-flex justify-content-center align-items-center py-3">
+                    <Link className="d-flex justify-content-center align-items-center py-3 text-decoration-none" to="/gallery">
                         <button className="btn btn-dark btn-brand ">View Gallery</button>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>

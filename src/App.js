@@ -7,10 +7,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login/Login';
 import Dashboard from './components/Shared/Dashboard/Dashboard';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import ViewGallery from './components/ViewGallery/ViewGallery';
 
 export const UserContext = createContext();
 export const ServiceContext = createContext();
@@ -30,6 +32,9 @@ function App() {
           <Switch>
             <Route path='/home'>
               <Home />
+            </Route>
+            <Route path='/gallery'>
+              <ViewGallery/>
             </Route>
             <Route path='/login'>
               <Login />
