@@ -21,7 +21,7 @@ const Navbar = () => {
     let loginButtonToggle;
     if (loggedInUser.name === undefined) {
         loginButtonToggle =
-            <Link className="nav-link color-1 nav-login-btn" to="/login" tabIndex="-1" aria-disabled="true">Login</Link>
+            <Link className="nav-link color-1 nav-login-btn" to="/login" tabIndex="-1" aria-disabled="true">Sign In</Link>
     }
     else {
         loginButtonToggle =
