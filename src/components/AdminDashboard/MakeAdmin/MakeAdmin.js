@@ -18,7 +18,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         setNewAdmin(data);
 
-        const url = "https://thawing-everglades-39599.herokuapp.com/addAdmin";
+        const url = "https://muhurto-server.vercel.app/addAdmin";
 
         fetch(url, {
             method: "POST",

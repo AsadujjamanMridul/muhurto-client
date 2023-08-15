@@ -20,7 +20,7 @@ const BookingList = () => {
         top: 30%;`;
 
     useEffect(() => {
-        fetch('https://thawing-everglades-39599.herokuapp.com/bookingList?email=' + loggedInUser.email)
+        fetch('https://muhurto-server.vercel.app/bookingList?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 setBookingList(data);

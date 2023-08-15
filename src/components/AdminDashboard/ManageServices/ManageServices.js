@@ -22,7 +22,7 @@ const ManageServices = () => {
     // Get All Services Information
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://thawing-everglades-39599.herokuapp.com/services')
+        fetch('https://muhurto-server.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -32,7 +32,7 @@ const ManageServices = () => {
 
 
     const deleteServices = (event, id) => {
-        fetch(`https://thawing-everglades-39599.herokuapp.com/deleteService/${id}`, {
+        fetch(`https://muhurto-server.vercel.app/deleteService/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -40,7 +40,7 @@ const ManageServices = () => {
                 if (result) {
                     alert("Service has been deleted successfully!");
                     setLoading(!loading);
-                    fetch('https://thawing-everglades-39599.herokuapp.com/services')
+                    fetch('https://muhurto-server.vercel.app/services')
                         .then(res => res.json())
                         .then(data => {
                             setServices(data);

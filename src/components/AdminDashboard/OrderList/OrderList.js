@@ -20,7 +20,7 @@ const OrderList = () => {
     const [bookingList, setBookingList] = useState([]);
 
     useEffect(() => {
-        fetch('https://thawing-everglades-39599.herokuapp.com/bookings')
+        fetch('https://muhurto-server.vercel.app/bookings')
             .then(res => res.json())
             .then(data => {
                 setBookingList(data);
@@ -31,7 +31,7 @@ const OrderList = () => {
 
     const handleStatusChange = (e, id) => {
 
-        fetch(`https://thawing-everglades-39599.herokuapp.com/updateStatus/${id}`, {
+        fetch(`https://muhurto-server.vercel.app/updateStatus/${id}`, {
             method: 'PATCH',
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ status: e.target.value })

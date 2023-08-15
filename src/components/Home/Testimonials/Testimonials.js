@@ -15,7 +15,7 @@ const Testimonials = () => {
     // Get All Services Information
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://thawing-everglades-39599.herokuapp.com/reviews')
+        fetch('https://muhurto-server.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, []);

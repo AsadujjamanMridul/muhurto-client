@@ -30,7 +30,7 @@ const Services = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://thawing-everglades-39599.herokuapp.com/services')
+        fetch('https://muhurto-server.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setServicesList(data);

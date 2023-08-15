@@ -28,7 +28,7 @@ const Book = () => {
     };
 
     const handlePayment = async paymentId => {
-        const url = "https://thawing-everglades-39599.herokuapp.com/newBooking";
+        const url = "https://muhurto-server.vercel.app/newBooking";
 
         fetch(url, {
             method: "POST",

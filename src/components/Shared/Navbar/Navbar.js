@@ -35,7 +35,7 @@ const Navbar = () => {
     const [roleDashboardName, setRoleDashboardName] = useState('Dashboard')
 
     useEffect(() => {
-        fetch(`https://thawing-everglades-39599.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
+        fetch(`https://muhurto-server.vercel.app/isAdmin?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => {
                 if (data) {

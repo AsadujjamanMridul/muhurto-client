@@ -13,7 +13,7 @@ const Review = () => {
         data.imageURL = loggedInUser.imageURL;
         setReviewData(data);
 
-        const url = "https://thawing-everglades-39599.herokuapp.com/addReview";
+        const url = "https://muhurto-server.vercel.app/addReview";
 
         fetch(url, {
             method: "POST",

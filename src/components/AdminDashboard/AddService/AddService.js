@@ -22,7 +22,7 @@ const AddService = () => {
         formData.append('serviceName', data.serviceName);
         formData.append('serviceCharge', data.serviceCharge);
 
-        fetch('https://thawing-everglades-39599.herokuapp.com/addService', {
+        fetch('https://muhurto-server.vercel.app/addService', {
             method: 'POST',
             body: formData
         })
